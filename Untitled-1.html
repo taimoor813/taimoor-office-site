@@ -1,0 +1,163 @@
+<!-- index.html - Homepage with MS Office style -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taimoor's Office Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f3f3;
+    }
+    .ribbon {
+      background-color: #2b5797;
+      padding: 10px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .ribbon div {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+    .content h1 {
+      font-size: 2.5em;
+      color: #2b5797;
+    }
+    .content p {
+      font-size: 1.2em;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #2b5797;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="ribbon">
+    <div>Home</div>
+    <div>Insert</div>
+    <div>Design</div>
+    <div>View</div>
+    <div><a href="formulas.html" style="color:white;text-decoration:none">Excel Formulas</a></div>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to Taimoor’s Office Hub</h1>
+    <p>Your digital workspace inspired by Microsoft Office. Learn Excel, Word, and more.</p>
+    <a href="formulas.html" class="btn">Explore Excel Formulas</a>
+  </div>
+</body>
+</html>
+
+<!-- formulas.html - Excel layout page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Formulas - Taimoor's Office Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+    }
+    .toolbar {
+      background-color: #dbe5f1;
+      padding: 10px 20px;
+      display: flex;
+      gap: 15px;
+      font-weight: bold;
+    }
+    .formula-section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .formula-category {
+      margin-bottom: 20px;
+    }
+    .formula-category h2 {
+      color: #2b5797;
+      border-bottom: 2px solid #2b5797;
+    }
+    .formula-category ul {
+      list-style: none;
+      padding: 0;
+    }
+    .formula-category li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .formula-name {
+      font-weight: bold;
+      color: #2b5797;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    Home | Formulas | Insert | Data | Review | View
+  </div>
+
+  <div class="formula-section">
+    <div class="formula-category">
+      <h2>Math & Trigonometry</h2>
+      <ul>
+        <li><span class="formula-name">SUM:</span> Adds numbers in a range.</li>
+        <li><span class="formula-name">ROUND:</span> Rounds a number to a specified number of digits.</li>
+        <li><span class="formula-name">ABS:</span> Returns absolute value.</li>
+        <li><span class="formula-name">POWER:</span> Raises to a power.</li>
+      </ul>
+    </div>
+    <div class="formula-category">
+      <h2>Text Functions</h2>
+      <ul>
+        <li><span class="formula-name">LEFT:</span> Returns first characters of text.</li>
+        <li><span class="formula-name">CONCAT:</span> Joins multiple strings.</li>
+        <li><span class="formula-name">LEN:</span> Length of text.</li>
+        <li><span class="formula-name">UPPER:</span> Converts to uppercase.</li>
+      </ul>
+    </div>
+    <div class="formula-category">
+      <h2>Logical Functions</h2>
+      <ul>
+        <li><span class="formula-name">IF:</span> Returns one value if TRUE, another if FALSE.</li>
+        <li><span class="formula-name">AND:</span> TRUE if all are TRUE.</li>
+        <li><span class="formula-name">OR:</span> TRUE if any is TRUE.</li>
+        <li><span class="formula-name">NOT:</span> Reverses the logic.</li>
+      </ul>
+    </div>
+    <div class="formula-category">
+      <h2>Date & Time Functions</h2>
+      <ul>
+        <li><span class="formula-name">TODAY:</span> Current date.</li>
+        <li><span class="formula-name">NOW:</span> Current date and time.</li>
+        <li><span class="formula-name">DATEDIF:</span> Difference between dates.</li>
+      </ul>
+    </div>
+    <div class="formula-category">
+      <h2>Lookup & Reference</h2>
+      <ul>
+        <li><span class="formula-name">VLOOKUP:</span> Vertical lookup.</li>
+        <li><span class="formula-name">INDEX:</span> Returns value by position.</li>
+        <li><span class="formula-name">MATCH:</span> Returns position of item.</li>
+        <li><span class="formula-name">XLOOKUP:</span> Modern lookup function.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
