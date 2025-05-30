@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Excel Formulas & MS Word Shortcut Keys</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+    color: #333;
+  }
+  h1, h2 {
+    color: #2b5797;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #ccc;
+  }
+  .search-box {
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #2b5797;
+    border-radius: 6px;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .formula-name, .shortcut-key {
+    font-weight: bold;
+    color: #2b5797;
+  }
+  .formula-desc, .shortcut-desc {
+    margin-left: 12px;
+  }
+</style>
+<script>
+  function filterList(inputId, listId) {
+    const input = document.getElementById(inputId);
+    const filter = input.value.toUpperCase();
+    const ul = document.getElementById(listId);
+    const li = ul.getElementsByTagName('li');
+    for(let i = 0; i < li.length; i++) {
+      const txtValue = li[i].textContent || li[i].innerText;
+      li[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? '' : 'none';
+    }
+  }
+</script>
+</head>
+<body>
+<div class="container">
+  <h1>Excel Formulas & MS Word Shortcut Keys</h1>
+
+  <div class="section">
+    <h2>Excel Formulas (Sample)</h2>
+    <div class="search-box">
+      <input type="text" id="formulaSearch" onkeyup="filterList('formulaSearch', 'formulaList')" placeholder="Search Excel Formulas..." />
+    </div>
+    <ul id="formulaList">
+      <li><span class="formula-name">SUM</span>: <span class="formula-desc">Adds all numbers in a range. Example: =SUM(A1:A10)</span></li>
+      <li><span class="formula-name">IF</span>: <span class="formula-desc">Returns value if TRUE, else value if FALSE. Example: =IF(A1>5, 'Yes', 'No')</span></li>
+      <li><span class="formula-name">VLOOKUP</span>: <span class="formula-desc">Looks up a value vertically in a table. Example: =VLOOKUP(lookup_value, table_array, col_index, FALSE)</span></li>
+      <li><span class="formula-name">INDEX</span>: <span class="formula-desc">Returns the value of a cell at intersection of row and column. Example: =INDEX(A1:C3, 2, 3)</span></li>
+      <li><span class="formula-name">MATCH</span>: <span class="formula-desc">Returns position of a lookup value. Example: =MATCH(50, A1:A10, 0)</span></li>
+      <li><span class="formula-name">CONCAT</span>: <span class="formula-desc">Joins multiple text strings. Example: =CONCAT(A1, \" \", B1)</span></li>
+      <li><span class="formula-name">TODAY</span>: <span class="formula-desc">Returns the current date.</span></li>
+      <li><span class="formula-name">LEN</span>: <span class="formula-desc">Returns length of text. Example: =LEN(A1)</span></li>
+      <li><span class="formula-name">ROUND</span>: <span class="formula-desc">Rounds a number to specified digits. Example: =ROUND(A1, 2)</span></li>
+      <!-- Add more formulas here -->
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>MS Word Shortcut Keys (Common)</h2>
+    <div class="search-box">
+      <input type="text" id="shortcutSearch" onkeyup="filterList('shortcutSearch', 'shortcutList')" placeholder="Search MS Word Shortcuts..." />
+    </div>
+    <ul id="shortcutList">
+      <li><span class="shortcut-key">Ctrl + C</span>: <span class="shortcut-desc">Copy selected text.</span></li>
+      <li><span class="shortcut-key">Ctrl + V</span>: <span class="shortcut-desc">Paste copied text.</span></li>
+      <li><span class="shortcut-key">Ctrl + X</span>: <span class="shortcut-desc">Cut selected text.</span></li>
+      <li><span class="shortcut-key">Ctrl + Z</span>: <span class="shortcut-desc">Undo last action.</span></li>
+      <li><span class="shortcut-key">Ctrl + Y</span>: <span class="shortcut-desc">Redo last undone action.</span></li>
+      <li><span class="shortcut-key">Ctrl + B</span>: <span class="shortcut-desc">Bold selected text.</span></li>
+      <li><span class="shortcut-key">Ctrl + I</span>: <span class="shortcut-desc">Italicize selected text.</span></li>
+      <li><span class="shortcut-key">Ctrl + U</span>: <span class="shortcut-desc">Underline selected text.</span></li>
+      <li><span class="shortcut-key">Ctrl + S</span>: <span class="shortcut-desc">Save document.</span></li>
+      <li><span class="shortcut-key">Ctrl + P</span>: <span class="shortcut-desc">Print document.</span></li>
+      <li><span class="shortcut-key">Ctrl + A</span>: <span class="shortcut-desc">Select all text.</span></li>
+      <!-- Add more shortcuts here -->
+    </ul>
+  </div>
+</div>
+</body>
+</html>
